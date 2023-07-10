@@ -37,7 +37,7 @@ const Payment = () => {
           },
         }}
         onLoadPaymentData={(paymentRequest) => {
-          console.log("load payment data", paymentRequest);
+          // console.log("load payment data", paymentRequest);
         }}
       />
     </div>

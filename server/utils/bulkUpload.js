@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 const data = require("./../data.json");
 const Categories = require("../Model/Categories");
 dotenv.config({ path: "./../.env" });
-console.log(process.env.MONGO_URL);
+// console.log(process.env.MONGO_URL);
 
 mongoose.connect(process.env.MONGO_URL);
 

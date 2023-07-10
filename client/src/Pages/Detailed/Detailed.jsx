@@ -18,7 +18,7 @@ const Detailed = () => {
   }, []);
 
   if (place == null) return <p>Loading....</p>;
-  console.log(place);
+  //console.log(place);
 
   return (
     <div id="detailedinfo">
