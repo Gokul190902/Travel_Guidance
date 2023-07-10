@@ -3,7 +3,7 @@ import "./Slide.scss";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const Slide = () => {
+const Slide = ({ setloading }) => {
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
   const [slides, setSlides] = useState([]);
@@ -14,6 +14,7 @@ const Slide = () => {
       );
       setSlides([...data]);
     };
+    setloading(true);
     getData();
   }, [slides]);
 

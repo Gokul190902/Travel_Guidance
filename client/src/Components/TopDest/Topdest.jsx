@@ -3,7 +3,7 @@ import "./Topdest.scss";
 import Card from "../TnCard/Card";
 // import Data from "../TnCard/tncards.json";
 import axios from "axios";
-function Topdest() {
+function Topdest({ setloading }) {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -13,6 +13,7 @@ function Topdest() {
       setPlaces([...data]);
     };
     getData();
+    setloading(false);
   }, []);
   return (
     <div>

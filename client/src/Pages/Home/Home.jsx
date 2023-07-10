@@ -6,13 +6,17 @@ import Slide from "../../Components/Slide/Slide";
 import TopDest from "../../Components/TopDest/Topdest";
 import Navbar from "../../Components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../Loading/Loading";
 const Home = () => {
   const [location, setlocation] = useState("");
+  const [loading, setloading] = useState(false);
+
   const navigate = useNavigate();
   const handleSearch = async (e) => {
     e.preventDefault();
     navigate(`/locations/${location}`);
   };
+
   return (
     <div>
       <div id="homescreen">
@@ -98,8 +102,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Slide />
-      <TopDest />
+      <Slide setloading={setloading} />
+      <TopDest setloading={setloading} />
       <Footer />
     </div>
   );
