@@ -7,7 +7,9 @@ function Topdest() {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get("http://localhost:8000/api/v1/tours");
+      const { data } = await axios.get(
+        "https://pleasant-pink-puppy.cyclic.app/api/v1/tours"
+      );
       setPlaces([...data]);
     };
     getData();

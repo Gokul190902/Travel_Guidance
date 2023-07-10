@@ -10,7 +10,7 @@ const Slide = () => {
   useEffect(() => {
     const getData = async () => {
       const { data } = await axios.get(
-        "http://localhost:8000/api/v1/categories"
+        "https://pleasant-pink-puppy.cyclic.app/api/v1/categories"
       );
       setSlides([...data]);
     };

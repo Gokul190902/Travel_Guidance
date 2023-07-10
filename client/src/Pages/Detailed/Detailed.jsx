@@ -11,7 +11,9 @@ const Detailed = () => {
   const [place, setplace] = useState(null);
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(`/place/${id}`);
+      const { data } = await axios.get(
+        `https://pleasant-pink-puppy.cyclic.app/api/v1/place/${id}`
+      );
       setplace(data);
     };
     getData();

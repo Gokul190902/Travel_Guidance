@@ -8,7 +8,9 @@ const Locations = () => {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(`/locations/${name}`);
+      const { data } = await axios.get(
+        `https://pleasant-pink-puppy.cyclic.app/api/v1/locations/${name}`
+      );
       setPlaces([...data]);
     };
     getData();

@@ -9,7 +9,9 @@ const Category = () => {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios.get(`/category/${name}`);
+      const { data } = await axios.get(
+        `https://pleasant-pink-puppy.cyclic.app/api/v1/category/${name}`
+      );
       setPlaces([...data]);
     };
     getData();

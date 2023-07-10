@@ -42,4 +42,13 @@
     // justify-content: center;
     gap: 48px;
   }
+
+  @media only screen and (max-width: 800px) {
+    .hotellist {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
